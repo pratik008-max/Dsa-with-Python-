@@ -43,6 +43,15 @@ class DoublyLinkedList:
         newnode.prev = tempnode
         newnode.next.prev = newnode
         tempnode.next = newnode
+  def traverseDLL(self):
+      if self.head is None:
+        print("There is no element to print")
+      else:
+          tempnode = self.head
+          while tempnode:
+              print(tempnode.value)
+              tempnode = tempnode.next
+                
 
 doubly = DoublyLinkedList()
 doubly.createDLL(0)
