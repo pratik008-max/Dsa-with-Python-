@@ -51,6 +51,15 @@ class DoublyLinkedList:
           while tempnode:
               print(tempnode.value)
               tempnode = tempnode.next
+  def reversetraversal(self):
+    if self.head is None:
+      print("There is no element to print")
+    else:
+      tempnode = self.tail
+      while tempnode:
+        print(tempnode.value)
+        tempnode = tempnode.next
+        
                 
 
 doubly = DoublyLinkedList()
