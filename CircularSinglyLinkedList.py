@@ -131,15 +131,7 @@ class CircularSLL:
                     index += 1
                 nextnode = tempnode.next
                 tempnode.next = nextnode.next
-    def traverseDLL(self):
-        if self.head is None:
-            print("There is no element to print")
-        else:
-            tempnode = self.head
-            while tempnode:
-                print(tempnode.value)
-                tempnode = tempnode.next
-                
+
 
 
 circuCSLL = CircularSLL()
