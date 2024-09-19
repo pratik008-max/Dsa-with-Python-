@@ -59,7 +59,32 @@ class DoublyLinkedList:
       while tempnode:
         print(tempnode.value)
         tempnode = tempnode.next
-        
+  def deleteNode(self, location):
+    if self.head is None:
+      print("There is no node to delete")
+    else:
+      if location == 0:
+        if self.head == self.tail:
+          self.head = None
+          self.tail = None
+        else:
+          self.head = self.head.next
+          self.head.prev = None
+      elif location == 1:
+        if self.head == self.tail:
+          self.head = None
+          self.tail = None
+        else:
+          self.tail = self.tail.prev
+          self.tail.next = None
+      else:
+        tempnode = self.head
+        index = 0
+        while tempnode:
+          tempnode = tempnode.next
+          index += 1
+        tempnode.next = tempnode.next.next
+        tempnode.next.prev = tempnode
                 
 
 doubly = DoublyLinkedList()
